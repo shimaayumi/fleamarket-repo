@@ -1,0 +1,495 @@
+body {
+    margin: 0 auto;
+}
+
+/* ===========================
+   🔝 ヘッダー
+   =========================== */
+.header {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header__logo img {
+    width: 23vw;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.search-form input[type='text'] {
+    padding: 10px;
+    padding-left: 30px;
+    width: 35vw;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 60px;
+    outline: none;
+    /* デフォルトの青枠を消す */
+
+
+}
+
+.search-form input[type="text"]:focus {
+    border: 2px solid #000;
+    /* フォーカス時にも黒枠 */
+}
+
+
+.btn {
+
+    color: #fff;
+
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    width: 7vw;
+    align-items: center;
+    font-size: 1.4vw;
+
+
+}
+
+
+.btn-outlet {
+    background-color: white;
+    color: black;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-text {
+    font-size: 1.4vw;
+
+}
+
+
+.header__menu {
+    display: flex;
+    gap: 3px;
+
+
+}
+/* ===========================
+   商品情報と購入ボタンのレイアウト
+   =========================== */
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    margin-top: 20px;
+    gap: 80px;
+  
+}
+
+.item {
+   
+    margin-bottom: 40px;
+    width: 100%;
+    display: flex;
+}
+
+.item img {
+    max-width: 100%;
+    height: auto;
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.item-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 60px;
+    height: 100%;
+}
+
+.item-name {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.item-price {
+    font-size: 26px;
+    color: #333;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.currency {
+    font-size: 0.7em;
+    /* 数字より少し小さく */
+    
+}
+
+/* フォームグループ */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #656262;
+    border-bottom: 1px solid#656262;
+   
+}
+
+.form-group label {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+   
+    font-size: 18px;
+}
+
+.payment-method-block {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+}
+
+/* セレクトボックスのスタイル */
+.form-control {
+    width: 50%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid#656262;
+    border-radius: 5px;
+    margin-left: 80px;
+    margin-bottom: 20px;
+}
+
+/* 配送先情報 */
+.form-address {
+  
+    padding-top: 30px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.address-method {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.address-method_ttl {
+    font-weight: bold;
+    width: 100px;
+    font-size: 18px;
+}
+
+.address-method__button a{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 18px;
+    text-decoration: none;
+    color: blue;
+  
+
+    
+   
+}
+
+.btn-change-address{
+    font-size: 18px;
+    width: 100%;
+    text-decoration: none;
+    color: blue;
+    margin-left: auto;
+    margin-right: 20px;
+   
+  
+  
+}
+
+
+.address-postal-code {
+    font-size: 16px;
+    margin-left: 40px;
+    margin-top: 16px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.address-detail {
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.address-building {
+    font-size: 16px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.address-wrapper {
+    display: flex;
+    gap: 8px;
+}
+
+
+
+/* ===========================
+   支払い金額表示
+   =========================== */
+.payment-amount {
+    font-size: 1.5vw;
+    color: #333;
+    margin: 0;
+    border: 1px solid #656262;
+    padding: 30px ;
+    justify-content: space-between;
+    display: flex;
+    font-weight: 100;
+
+}
+
+
+
+.payment-amount .price {
+    font-size: 1.5vw;
+    color: #333;
+}
+
+/* ===========================
+   支払い方法のスタイル
+   =========================== */
+.payment-method-wrapper {
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #656262;
+    border-top: none;
+    padding: 30px ;
+    justify-content: space-between;
+    
+ 
+    
+}
+
+
+.payment-method-label {
+    font-size: 1.5vw;
+    color: #333;
+    margin: 0 ;
+    
+}
+
+.payment_method {
+    width: 100%;
+    font-size: 20px;
+    
+    padding-bottom: 20px;
+    margin: 20px;
+}
+
+.checkout-button {
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 22px;
+    padding: 12px 24px;
+    width: 100%;
+    font-weight: bold;
+
+    text-align: center;
+    cursor: pointer;
+
+    margin: 60px auto;
+    display: block;
+}
+
+.btn-primary:hover {
+    background-color: #e14a4a;
+
+}
+
+
+/* ===========================
+   レイアウトのためのカラム設定
+   =========================== */
+.left-column {
+    width: 65%;
+    border-bottom: 1px solid #656262;
+}
+
+.right-column {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* エラーメッセージ */
+.error-message {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 16px;
+    margin-left: 40px;
+}
+
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 10px center;
+    background-size: 30px;
+    padding-right: 30px;
+    border: 1px solid #656262;
+    border-radius: 4px;
+    height: 30px;
+}
+.custom-select:hover,
+.custom-select:focus {
+    border: 1px solid #000;
+    /* 黒い枠線 */
+    outline: none;
+    /* デフォルトの青い枠線を消す */
+}
+
+
+.item {
+    position: relative;
+   
+}
+
+/* Sold表示 */
+.sold-label {
+    color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 80px solid rgba(255, 0, 0, 0.8);
+    border-right: 80px solid transparent;
+    z-index: 10;
+}
+
+.sold-label::after {
+    content: "SOLD";
+    position: absolute;
+    top: -63px;
+    /* 位置調整 */
+    left: 5px;
+    /* 位置調整 */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    white-space: nowrap;
+}
+/* タブレットサイズのレスポンシブデザイン */
+@media screen and (max-width: 850px) {
+    body {
+        font-size: 16px;
+        /* 文字サイズの調整 */
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        /* モバイル対応で縦並び */
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .left-column,
+    .right-column {
+        width: 90%;
+        /* 両カラムの幅を調整 */
+        padding: 10px 0;
+    }
+
+  
+
+    .item img {
+        max-width: 80%;
+        height: auto;
+        /* 画像のサイズを調整 */
+    }
+
+    .item-info {
+        text-align: center;
+    }
+
+    
+     
+
+   .form-address {
+    width: 95%;
+   }
+    .form-control {
+        width: 90%;
+        padding: 10px;
+        font-size: 18px !important;
+        border: 1px solid #656262;
+        border-radius: 5px;
+        margin: 10px auto;
+        margin-bottom: 20px;
+        height: 40px;
+    }
+
+    .payment-method-label {
+        font-size: 18px !important;
+      
+        
+    }
+
+    .payment-method-wrapper {
+        font-size: 18px !important;
+        
+        }
+    
+
+    .payment-amount strong{
+        font-size: 18px!important;
+       
+    }
+
+    .price {
+             font-size: 18px !important;
+    
+         }
+
+    
+
+    .right-column {
+        text-align: center;
+        /* 右カラムを中央に配置 */
+    }
+}

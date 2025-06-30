@@ -1,0 +1,354 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+
+}
+
+
+
+/* ===========================
+   🔝 ヘッダー
+   =========================== */
+.header {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header__logo img {
+    width: 23vw;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.search-form input[type='text'] {
+    padding: 10px;
+    padding-left: 30px;
+    width: 35vw;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 60px;
+    outline: none;
+    /* デフォルトの青枠を消す */
+
+
+}
+
+.search-form input[type="text"]:focus {
+    border: 2px solid #000;
+    /* フォーカス時にも黒枠 */
+}
+
+
+.btn {
+    color: #fff;
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    width: 7vw;
+    align-items: center;
+    font-size: 1.4vw;
+
+}
+
+
+.btn-outlet {
+    background-color: white;
+    color: black;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-text {
+    font-size: 1.4vw;
+
+}
+
+
+.header__menu {
+    display: flex;
+    gap: 3px
+
+}
+/* ===========================
+   コンテナ
+=========================== */
+.container {
+    width: 50%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* ===========================
+   フォームスタイル
+=========================== */
+.page-title  {
+    font-size: 2rem;
+    margin: 10px auto;
+    color: black;
+    text-align: center;
+   
+}
+
+
+.section-title {
+    font-size: 1.5rem;
+    margin: 50px auto;
+    color: rgb(104, 106, 108);
+    border-bottom: 1px solid #746a6a;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+label {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-top: 30px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #746a6a;
+    border-radius: 3px;
+    box-sizing: border-box;
+   
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+input[type="file"] {
+    padding: 5px;
+}
+
+input,textarea:focus {
+    outline: none;
+    border-color: #000;
+}
+/* ===========================
+   ファイル選択ボタンのカスタマイズ
+=========================== */
+.custom-file-upload {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    /* 親要素の高さを指定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #746a6a;
+    border-radius: 3px;
+    overflow: hidden;
+    
+}
+
+/* カスタムボタン（画像やテキスト） */
+.item-image_ttl {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 16px;
+    border: 1px solid red;
+    padding: 5px 10px;
+    border-radius: 10px;
+    z-index: 1;
+    text-align: center;
+}
+
+/* 画像プレビュー */
+.img-preview {
+    max-width: 200px;
+    max-height: 200px;
+    width: auto;
+    height: auto;
+  
+    border: 1px solid #ddd;
+    padding: 5px;
+    display: none;
+    /* 初期状態では非表示 */
+
+    z-index: 5;
+}
+
+/* ファイル選択ボタンを透明にして、カスタムボタンの上に配置 */
+.file-input {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 親要素いっぱいに広がる */
+    opacity: 0;
+    /* 完全に透明化 */
+    z-index: 2;
+    /* カスタムボタンの上に配置 */
+  
+}
+
+
+
+
+
+/* ===========================
+   ボタンスタイル
+=========================== */
+button[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 100px auto;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background-color: darkred;
+}
+
+/* ===========================
+   カテゴリーボタン
+=========================== */
+/* カテゴリーボタン */
+.category-btn {
+    background-color: white;
+    border: 1.5px solid red;
+    border-radius: 30px;
+    color: red;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 12px;
+    padding: 3px 20px;
+    text-align: center;
+    margin: 15px 5px;
+}
+
+/* 選択されたボタンのスタイル */
+.category-btn.selected {
+    background-color: red;
+    color: white;
+    border-color: red;
+}
+/* ===========================
+   価格入力欄のスタイル
+=========================== */
+
+/* 価格入力欄のスタイル */
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #746a6a;
+    border-radius: 3px;
+    box-sizing: border-box;
+    /* ボックスモデルを明確に */
+}
+
+/* 価格の入力欄だけ右寄せ */
+.form-control.price-input {
+    text-align: right;
+    /* 数字を右寄せに */
+    padding-left: 30px;
+    /* ¥マーク分のスペースを確保 */
+}
+
+/* ¥記号のスタイル */
+.currency-symbol {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.input-with-symbol {
+    position: relative;
+    width: 100%;
+}
+
+.price-input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px;
+    /* ¥マーク分のスペース */
+    font-size: 1rem;
+    border: 1px solid #746a6a;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: right;
+}
+
+
+/* 商品状態のセレクトボックスにのみ▼を追加 */
+.select-status {
+    -webkit-appearance: none; /* SafariとChromeの標準デザインを無効化 */
+    -moz-appearance: none; /* Firefoxの標準デザインを無効化 */
+    appearance: none; /* 他のブラウザの標準デザインを無効化 */
+    padding: 10px 30px 10px 10px; /* 右側にスペースを追加して、▼アイコンのスペース確保 */
+    border: 1px solid #746a6a;
+    border-radius: 5px;
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 5"%3E%3Cpolygon points="0,0 8,0 4,5" fill="%23808080"%3E%3C/polygon%3E%3C/svg%3E') no-repeat right 10px center;
+    background-size: 16px 10px; /* ▼アイコンの大きさ調整 */
+    font-size: 1rem;
+}
+
+.select-status:focus {
+    outline: none;
+    border-color: #000 ;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}

@@ -1,0 +1,268 @@
+body {
+    margin: 0 auto;
+
+    padding: 0;
+    width: 100%;
+
+}
+
+/* ===========================
+   🔝 ヘッダー
+   =========================== */
+.header {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header__logo img {
+    width: 23vw;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.search-form input[type='text'] {
+    padding: 10px;
+    padding-left: 30px;
+    width: 35vw;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 60px;
+    outline: none;
+    /* デフォルトの青枠を消す */
+
+
+}
+
+.search-form input[type="text"]:focus {
+    border: 2px solid #000;
+    /* フォーカス時にも黒枠 */
+}
+
+
+
+.btn {
+
+    color: #fff;
+
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    width: 7vw;
+    align-items: center;
+    font-size: 1.4vw;
+
+
+}
+
+
+.btn-outlet {
+    background-color: white;
+    color: black;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-text {
+    font-size: 1.4vw;
+
+}
+
+
+.header__menu {
+    display: flex;
+    gap: 3px;
+
+
+}
+
+/* ===========================
+   📸 プロフィール画像
+   =========================== */
+/* 横並びレイアウト */
+.form-group-row {
+    display: flex;
+    align-items: center;
+   gap: 15px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+/* プロフィール画像 */
+.profile-image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+ 
+}
+
+
+
+/* プロフィール画像 */
+.profile-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 50% !important;
+    display: block !important;
+    margin: 0 !important;
+   max-width: none !important;
+
+}
+
+
+
+
+/* ファイル選択ボタン */
+.file-input {
+    display: block;
+    flex-direction: column;
+    margin-left: 15px;
+    width: auto;
+     
+}
+
+
+.file-input label {
+    font-size: 18px;
+    padding: 5px 10px;
+    border: 1.5px solid red;
+    color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+    width: auto;
+    min-width: 120px;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+
+
+.file-input input {
+    display: none;
+}
+/* ===========================
+   📋 フォーム部分
+   =========================== */
+.container {
+   width: 45%;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+
+.profile-header {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 40px auto;
+}
+
+.form-group-row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* ← ここで余白を調整 */
+    margin-left: 0;
+    height: 100px;
+    margin-bottom: 80px;
+}
+
+.form-group label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+   
+    
+}
+
+.form-group input {
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #a8a5a5;
+    border-radius: 4px;
+    box-sizing: border-box;
+  
+}
+
+
+
+.form-group input:focus {
+    border-color: #888b8f;
+    outline: none;
+}
+
+.btn-success {
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 60px auto;
+    display: block;
+    font-weight: bold;
+   
+}
+
+.btn-success:hover {
+    background-color: darkred;
+}
+
+
+
+/* ===========================
+   ⚠️ エラーメッセージ
+   =========================== */
+
+.text-danger {
+    color: red;
+}
+

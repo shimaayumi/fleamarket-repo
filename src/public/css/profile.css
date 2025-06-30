@@ -1,0 +1,387 @@
+body {
+    margin: 0 auto;
+   max-width: 1540px    ;
+}
+
+.container {
+    width: 100%;
+   
+}
+
+/* ===========================
+   🔝 ヘッダー
+   =========================== */
+.header {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header__logo img {
+    width: 23vw;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 30px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.search-form input[type='text'] {
+    padding: 10px;
+    padding-left: 30px;
+    width: 35vw;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-right: 60px;
+    outline: none;
+    /* デフォルトの青枠を消す */
+
+
+}
+
+.search-form input[type="text"]:focus {
+    border: 2px solid #000;
+    /* フォーカス時にも黒枠 */
+}
+
+
+
+.btn {
+
+    color: #fff;
+
+    text-decoration: none;
+    background: none;
+    border: none;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    width: 7vw;
+    align-items: center;
+    font-size: 1.4vw;
+
+
+}
+
+
+.btn-outlet {
+    background-color: white;
+    color: black;
+    height: 40px;
+    padding: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-text {
+    font-size: 1.4vw;
+
+}
+
+
+.header__menu {
+    display: flex;
+    gap: 3px;
+
+
+}
+
+/* ===========================
+   👤 プロフィール
+   =========================== */
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding: 2vw;
+    margin: 30px 18vw;
+    
+    
+        
+}
+
+/* プロフィール画像 */
+.profile-image {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #ddd;
+    /* 背景色 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: relative;
+    /* 相対位置 */
+}
+
+/* プロフィール画像 */
+.profile-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 50% !important;
+    display: block !important;
+    margin: 0 !important;
+    /* マージンをリセット */
+    max-width: none !important;
+    /* max-widthを無効にする */
+}
+
+
+/* ユーザー名と編集ボタンを横並び */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 8vw;
+    justify-content: space-between;
+}
+
+.profile-name {
+    font-size: 2.5vw;
+    font-weight: bold;
+    margin: 0;
+    margin-left: 3vw;
+    width: 90%;
+}
+
+.edit-button {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    padding: 8px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-size: 1.8vw;
+   
+    width: 20vw;
+    text-align: center;
+
+}
+
+
+.profile-info p {
+    color: #777;
+    font-size: 20px;
+}
+
+
+
+.tabs {
+    border-bottom: 1.5px solid #999696;
+   padding-bottom: 5px;
+   
+}
+
+.tabs .btn {
+    color: rgb(73, 72, 72);
+    font-size: 18px;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+
+.tabs .btn.active {
+    color: red;
+}
+
+.tabs a:first-child {
+    margin-left: 100px;
+    text-decoration: none;
+    font-weight: bold;
+    
+    font-size: 20px;
+}
+
+.tabs a:nth-child(2) {
+    margin-left: 50px;
+    text-decoration: none;
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+.tabs a:nth-child(3) {
+    margin-left: 50px;
+    text-decoration: none;
+    font-weight: bold;
+
+    font-size: 20px;
+}
+
+
+.notification-badge{
+  
+    background-color: red;
+    color: white;
+    border-radius: 30%;
+    padding: 4px 5px;
+    font-size: 14px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+
+.item-notification {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: red;
+    color: white;
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    z-index: 10;
+    font-weight: bold;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ===========================
+   🛍️ 商品リスト（横並び調整）
+   =========================== */
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* ⭐️ 常に4カラム固定 */
+    gap: 30px;
+    margin: 50px;
+
+
+}
+
+/* 商品アイテム */
+.item {
+    display: flex;
+    flex-direction: column;
+    /* アイテム内の要素を縦に配置 */
+    align-items: center;
+    /* アイテムを中央揃え */
+    justify-content: center;
+    text-align: center;
+
+}
+
+/* 商品画像 */
+.item-image {
+    position: relative;
+    transition: transform 0.3s ease;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /* 画像の角を丸く */
+    width: 90%;
+    margin: 0 auto;
+    /* 中央に配置 */
+    aspect-ratio: 1 / 1;
+    /* 正方形に設定 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    /* 画像がない場合の背景色 */
+    overflow: hidden;
+    /* はみ出た部分を隠す */
+}
+
+.item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 画像の比率を維持しつつ枠内に収める */
+}
+
+/* 商品リンク */
+.item-link {
+    text-decoration: none;
+    color: black;
+    /* リンク色 */
+
+}
+
+
+/* 商品名 */
+.item-name {
+    width: 90%;
+    text-align: left;
+    font-size: 20px;
+    /* 商品名を大きく */
+    font-weight: normal;
+    /* 商品名を細くする */
+    color: black;
+    margin-left: 20px;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+/* Sold表示 */
+.sold-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 80px solid rgba(255, 0, 0, 0.8);
+    border-right: 80px solid transparent;
+    z-index: 10;
+}
+
+.sold-label::after {
+    content: "SOLD";
+    position: absolute;
+    top: -63px;
+    /* 位置調整 */
+    left: 5px;
+    /* 位置調整 */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transform: rotate(-45deg);
+    white-space: nowrap;
+}
+
+@media (max-width: 850px) {
+    .item-list {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 20px !important;
+        margin: 30px !important;
+    }
+}
+
+
+/* ===========================
+   ⭐️ レーティング表示
+   =========================== */
+.stars-display {
+    display: inline-flex;
+    align-items: center;
+    font-size: 28px;
+    margin-bottom: 12px;
+    margin-left: 50px;
+    margin-right: 200px;
+}
+
+.star {
+    margin-right: 3px;
+    color: lightgray;
+}
+
+.star.filled {
+    color: gold;
+}
