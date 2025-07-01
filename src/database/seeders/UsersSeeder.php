@@ -11,17 +11,17 @@ class UsersSeeder extends Seeder
 {
     public function run()
     {
-        User::create([
+        User::firstOrCreate([
             'name' => 'ユーザーA',
             'email' => 'userA@example.com',
             'password' => Hash::make('password123'),
         ]);
-        User::create([
+        User::firstOrCreate([
             'name' => 'ユーザーB',
             'email' => 'userB@example.com',
             'password' => Hash::make('password123'),
         ]);
-        User::create([
+        User::firstOrCreate([
             'name' => 'ユーザーC',
             'email' => 'userC@example.com',
             'password' => Hash::make('password123'),
