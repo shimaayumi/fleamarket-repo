@@ -39,6 +39,10 @@
 Stripe公式サイト （https://dashboard.stripe.com/register）にアクセスし、アカウントを作成します。
 
 開発モード（テストモード）に切り替え、「APIキー」を取得します。
+[Stripe ダッシュボード](https://dashboard.stripe.com/apikeys) から取得できます。
+
+> ⚠️ 注意: `STRIPE_SECRET` は機密情報のため、絶対に公開しないでください。
+
 - 公開可能キー（Publishable key）
 - シークレットキー（Secret key）
 
@@ -49,14 +53,8 @@ composer require stripe/stripe-php
 【3】環境変数（.env）に Stripe の API キーを追加
 .env ファイルに以下を追記してください：
 
-
-STRIPE_PUBLIC=your_stripe_publishable_key
-STRIPE_SECRET=your_stripe_secret_key
-
-
-`your_stripe_publishable_key` と `your_stripe_secret_key` は [Stripe ダッシュボード](https://dashboard.stripe.com/apikeys) から取得できます。
-
-> ⚠️ 注意: `STRIPE_SECRET` は機密情報のため、絶対に公開しないでください。
+- STRIPE_PUBLIC=your_stripe_publishable_key
+- STRIPE_SECRET=your_stripe_secret_key
 
 
 
@@ -81,6 +79,7 @@ MAIL_FROM_NAME="Coachtech Flea Market"
 
 開発・テスト用のダミーデータを下記のシーダーで登録しています。  
 詳細は「Laravel環境構築」セクションの `php artisan db:seed` をご参照ください。
+
 
 
 ### ダミーデータの内容
